@@ -1,9 +1,11 @@
-# ComfyUI-User-Auth-OTP
+# ComfyUI-OTP-Auth
 
 [🇯🇵 日本語版へジャンプ](#日本語)
 
 A custom node for ComfyUI that adds a simple One-Time Password (OTP) authentication using Google Authenticator or similar apps.
 It acts as a "gatekeeper" to prevent unauthorized use when hosting ComfyUI on a publicly accessible server.
+
+![Login Screen](images/Login.png)
 
 ## Features
 
@@ -26,6 +28,9 @@ pip install -r requirements.txt
 
 1. Start ComfyUI.
 2. Open ComfyUI in your browser. You will see the **Initial Setup** screen.
+
+![Setup Screen](images/AuthSetup.jpg)
+
 3. Scan the displayed **QR Code** with your authenticator app (e.g., Google Authenticator).
    - *Note*: If you are using this locally, check "Allow Localhost without Auth" to skip authentication for local access in the future.
 4. Enter the 6-digit code shown in your app and click "Complete Setup".
@@ -68,10 +73,12 @@ If you want to reset your secret key or change authentication settings:
 ---
 
 <a name="日本語"></a>
-# ComfyUI-User-Auth-OTP (Japanese)
+# ComfyUI-OTP-Auth (Japanese)
 
 ComfyUIにGoogle AuthenticatorなどのOTP（ワンタイムパスワード）を使用した簡易的な認証機能を追加するカスタムノードです。
 グローバル公開されているサーバーなどでの不正利用を防ぐための「門番」として機能します。
+
+![Login Screen](images/Login.png)
 
 ## 機能
 
@@ -94,6 +101,9 @@ pip install -r requirements.txt
 
 1. ComfyUIを起動します。
 2. ブラウザでComfyUIにアクセスすると、**Initial Setup** 画面が表示されます。
+
+![Setup Screen](images/AuthSetup.jpg)
+
 3. 画面に表示された **QRコード** をGoogle Authenticatorなどの認証アプリで読み取ります。
    - ※ ローカル（自分のPC）だけで使う場合は、「Allow Localhost without Auth」にチェックを入れると、次回からローカルアクセス時の認証がスキップされます。
 4. アプリに表示された6桁のコードを入力し、「Complete Setup」をクリックします。
