@@ -29,7 +29,7 @@ Documentation = "https://github.com/ah-kun/ComfyUI-OTP-Auth/wiki"
 "Bug Tracker" = "https://github.com/ah-kun/ComfyUI-OTP-Auth/issues"
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "ah-kun"
 DisplayName = "ComfyUI-OTP-Auth"
 Icon = ""
 includes = [] 
