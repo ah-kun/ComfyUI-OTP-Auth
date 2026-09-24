@@ -55,7 +55,7 @@ COOKIE_SAMESITE = Strict
 - `COOKIE_SECURE = False`: allows HTTP cookies. Use only on trusted local networks.
 - `COOKIE_SAMESITE`: `Strict`, `Lax`, or `None`. Default is `Strict`.
 
-Existing cookies from versions before 0.2.0 are intentionally invalid after this update. Log in once with TOTP again.
+Existing cookies from releases before the signed-session-cookie update are intentionally invalid after this update. Log in once with TOTP again.
 
 ### Localhost / reverse proxy warning
 
@@ -81,7 +81,7 @@ A POST request to `/custom_auth/logout` clears the authentication cookie.
 
 ## Compatibility
 
-Version 0.2.0 was tested with ComfyUI 0.37.0. ComfyUI changes over time, so testing against newer releases is recommended before exposing a server publicly.
+Version 1.1.1 was tested with ComfyUI 0.37.0. ComfyUI changes over time, so testing against newer releases is recommended before exposing a server publicly.
 
 ---
 
@@ -103,7 +103,7 @@ ComfyUI 全体のWebアクセスに TOTP（ワンタイムパスワード）認�
 
 ## セキュリティ上の変更点
 
-0.2.0以前はログイン済みCookieの値が固定文字列でした。0.2.0からはランダムな `SESSION_SECRET` を使ってCookieへ署名するため、Cookie名を知っているだけでは認証済みCookieを偽造できません。
+このセキュリティ更新より前はログイン済みCookieの値が固定文字列でした。現在はランダムな `SESSION_SECRET` を使ってCookieへ署名するため、Cookie名を知っているだけでは認証済みCookieを偽造できません。
 
 アップデート前のCookieは無効になります。アップデート後、TOTPで一度ログインし直してください。
 

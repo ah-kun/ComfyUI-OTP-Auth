@@ -15,7 +15,7 @@ from server import PromptServer
 
 
 CONFIG_FILE = os.path.join(os.path.dirname(__file__), "config.ini")
-PLUGIN_VERSION = "0.2.0"
+PLUGIN_VERSION = "1.1.1"
 
 
 def _write_config(config):
